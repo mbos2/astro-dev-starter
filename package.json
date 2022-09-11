@@ -1,18 +1,23 @@
 {
-  "name": "@example/basics",
+  "name": "astro-dev-starter",
   "version": "0.0.1",
   "private": true,
   "scripts": {
-    "dev": "astro dev",
     "start": "astro dev",
-    "build": "astro build",
+    "build-astro": "astro build",
+    "compress": "astro-compress",
+    "build": "npm-run-all build-astro compress",
     "preview": "astro preview",
-    "astro": "astro"
+    "astro": "astro",
+    "analyze": "analyze-css --file dist/styles/styles.min.css"
   },
   "dependencies": {
     "astro": "^1.2.1"
   },
   "devDependencies": {
-    "prettier": "^2.7.1"
+    "analyze-css": "^2.1.55",
+    "npm-run-all": "^4.1.5",
+    "prettier": "^2.7.1",
+    "sass": "^1.54.9"
   }
 }

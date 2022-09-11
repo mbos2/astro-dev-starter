@@ -1,0 +1,69 @@
+@use './mixins.scss';
+@use '../../layout/layout.scss';
+
+.button {
+
+  &-primary {
+    @include mixins.primary;
+  }
+
+  &-primary-outline {
+    @include mixins.primary-outline;
+  }
+
+  &-secondary {
+    @include mixins.secondary;
+  }
+
+  &-secondary-outline {
+    @include mixins.secondary-outline;
+  }
+
+  &-light {
+    @include mixins.light;
+  }
+
+  &-light-outline {
+    @include mixins.light-outline;
+  }
+
+  &-dark {
+    @include mixins.dark;
+  }
+
+  &-dark-outline {
+    @include mixins.dark-outline;
+  }
+
+  &-success {
+    @include mixins.success;
+  }
+
+  &-success-outline {
+    @include mixins.success-outline;
+  }
+
+  &-warning {
+    @include mixins.warning;
+  }
+
+  &-warning-outline {
+    @include mixins.warning-outline;
+  }
+
+  &-danger {
+    @include mixins.danger;
+  }
+
+  &-danger-outline {
+    @include mixins.danger-outline;
+  }
+
+  &-info {
+    @include mixins.info;
+  }
+
+  &-info-outline {
+    @include mixins.info-outline;
+  }
+}

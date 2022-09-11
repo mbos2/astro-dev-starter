@@ -1,0 +1,48 @@
+$theme-colors: (
+  'primary': (
+    'default': hsl(216, 100%, 55%),
+    'dark': hsl(216, 100%, 40%),
+    'light': hsl(216, 100%, 70%)
+  ),
+  'secondary': (
+    'default': hsl(0, 0%, 50%),
+    'dark': hsl(0, 0%, 35%),
+    'light': hsl(0, 0%, 65%)
+  ),
+  'light': (
+    'default': hsl(0, 0%, 100%),
+    'dark': hsl(0, 0%, 85%),
+  ),
+  'dark': (
+    'default': hsl(0, 0%, 15%),
+    'light': hsl(0, 0%, 30%),
+  ),
+  'success': (
+    'default': hsl(147, 87%, 60%),
+    'dark': hsl(138, 56%, 50%),
+    'light': hsl(147, 87%, 40%)
+  ),
+  'warning': (
+    'default': hsl(24, 100%, 60%),
+    'dark': hsl(24, 100%, 45%),
+    'light': hsl(24, 100%, 75%)
+  ),
+  'danger': (
+    'default': hsl(0, 100%, 60%),
+    'dark': hsl(0, 100%, 45%),
+    'light':hsl(0, 100%, 75%)
+  ),
+  'info': (
+    'default': hsl(180, 60%, 60%),
+    'dark': hsl(180, 60%, 45%),
+    'light': hsl(180, 60%, 75%)
+  )
+);
+
+$breakpoints: (
+  'xs': 0rem, // 0px mobile
+  'sm': 40rem, // 640px tablet
+  'md': 62rem, // 992px laptop
+  'lg': 75rem, // 1200px desktop
+  'xlg': 90rem, // 1440px large desktop
+);
