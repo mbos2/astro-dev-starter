@@ -1,0 +1,126 @@
+@use '../../functions/functions.scss' as func;
+@use 'variables.scss';
+
+@mixin btn($bgColor, $txtColor, $type:'dark') {
+  background-color: func.color($bgColor);
+  border-color: func.color($bgColor);
+  border-radius: variables.$border-radius;
+  border-style: variables.$border-style;
+  border-width: variables.$border-width;
+  color: func.color($txtColor);
+  cursor: variables.$cursor;
+  font-size: variables.$font-size;
+  font-weight: variables.$font-weight;
+  line-height: normal;
+  margin: variables.$margin;
+  padding: variables.$padding;
+  transition: variables.$transition;
+  vertical-align: inherit;
+
+  &:hover {
+    background-color: func.color($bgColor, $type);
+    border-color: func.color($bgColor, $type);
+    color: func.color($txtColor);
+  }
+
+  &[aria-disabled='true'] {
+    background-color: func.color('light', 'dark');
+    border-color: func.color('light', 'dark');
+    color: func.color('dark', 'light');
+    cursor: variables.$cursor-disabled;
+  }
+}
+
+@mixin btn-outline($bgColor, $txtColor, $hoverColor: 'light') {
+  background-color: func.color('light', 'light');
+  border-color: func.color($txtColor);
+  border-radius: variables.$border-radius;
+  border-style: variables.$border-style;
+  border-width: variables.$border-width;
+  color: func.color($txtColor);
+  cursor: variables.$cursor;
+  font-size: variables.$font-size;
+  font-weight: variables.$font-weight;
+  line-height: normal;
+  margin: variables.$margin;
+  padding: variables.$padding;
+  transition: variables.$transition;
+  vertical-align: inherit;
+
+  &:hover {
+    background-color: func.color($bgColor, 'dark');
+    border-color: func.color($bgColor, $bgColor);
+    color: func.color($hoverColor);
+  }
+
+  &[aria-disabled='true'] {
+    background-color: func.color('light', 'dark');
+    border-color: func.color('light', 'dark');
+    color: func.color('dark', 'light');
+    cursor: variables.$cursor-disabled;
+  }
+}
+
+@mixin primary {
+  @include btn('primary', 'light');
+}
+
+@mixin primary-outline {
+  @include btn-outline('primary', 'primary');
+}
+
+@mixin secondary {
+  @include btn('secondary', 'light');
+}
+
+@mixin secondary-outline {
+  @include btn-outline('secondary', 'secondary', 'light');
+}
+
+@mixin dark {
+  @include btn('dark', 'light', 'light');
+}
+
+@mixin dark-outline {
+  @include btn-outline('dark', 'dark', 'light');
+}
+
+@mixin light {
+  @include btn('light', 'dark', 'dark');
+}
+
+@mixin light-outline {
+  @include btn-outline('light', 'light', 'dark');
+}
+
+@mixin success {
+  @include btn('success', 'dark');
+}
+
+@mixin success-outline {
+  @include btn-outline('success', 'success', 'light');
+}
+
+@mixin warning {
+  @include btn('warning', 'dark');
+}
+
+@mixin warning-outline {
+  @include btn-outline('warning', 'warning', 'light');
+}
+
+@mixin danger {
+  @include btn('danger', 'light');
+}
+
+@mixin danger-outline {
+  @include btn-outline('danger', 'danger', 'light');
+}
+
+@mixin info {
+  @include btn('info', 'dark');
+}
+
+@mixin info-outline {
+  @include btn-outline('info', 'info', 'light');
+}

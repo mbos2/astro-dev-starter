@@ -1,0 +1,17 @@
+@use '../configuration/configuration.scss';
+
+@function color($color, $type:'default') {
+  @if map-has-key(configuration.$theme-colors, $color) {
+    $prop: map-get(configuration.$theme-colors, $color);
+    @if $type != 'default' and map-has-key($prop, $type) {
+      $color: map-get($prop, $type);
+    } @else {
+      $color: map-get($prop, 'default');
+    }
+  } @else {
+    @if type-of($color) != color {
+      @error 'Invalid color name: `#{$color}`.';
+    }
+  }
+  @return $color;
+}
