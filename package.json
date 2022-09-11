@@ -7,7 +7,6 @@
     "build-astro": "astro build",
     "compress": "astro-compress",
     "build": "npm-run-all build-astro compress",
-    "build-netlify": "npm-run-all install build",
     "preview": "astro preview",
     "astro": "astro",
     "analyze": "analyze-css --file dist/styles/styles.min.css",
