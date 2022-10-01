@@ -1,21 +1,12 @@
 ---
-
 ---
 <nav>
   <div>
     <a class="" title="home" href="#" target="_blank">Bring me Home!</a>
-    <label>Set Dark Theme
-    <input id="theme-toggle" type="checkbox" onclick="toggleColorTheme(event)" aria-disabled="true"/>
-    </label>
   </div>
 </nav>
 
 <style lang="scss">
-  @use '../../styles/functions/functions.scss' as f;
-
-  label {
-    color: var(--title-color);
-  }
   nav {
     padding: 40px 20px;
     width: 80%;
@@ -32,27 +23,3 @@
     }
   }
 </style>
-
-<script is:inline>
-  const initColorTheme= ()=>{
-    const theme = localStorage.getItem('colorTheme');
-    const themeToggle = document.getElementById("theme-toggle");
-
-    if(themeToggle){
-      themeToggle.checked = theme ==='dark'
-    }
-    setColorTheme(theme || 'light');
-  }
-
-  const setColorTheme = (theme)=> {
-    localStorage.setItem('colorTheme', theme);
-    document.documentElement.setAttribute('data-theme', theme);
-  }
-
-  const toggleColorTheme = (event) => {
-    const theme = event.target.checked ? 'dark' : 'light';
-    setColorTheme(theme);
-  }
-
-  initColorTheme();
-</script>

@@ -26,6 +26,10 @@ import Navigation from '../components/Navigation/Navigation.astro';
     </header>
 		<slot />
     <footer></footer>
+    <script>
+      import {initColorTheme} from '../lib/utils';
+      initColorTheme();
+    </script>
 	</body>
 </html>
 <style is:global lang="scss">
