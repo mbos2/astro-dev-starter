@@ -8,7 +8,6 @@ import Navigation from '../components/Navigation/Navigation.astro';
 ---
 
 
-
 <!DOCTYPE html>
 <html lang="en">
 	<head>
@@ -30,7 +29,6 @@ import Navigation from '../components/Navigation/Navigation.astro';
 	</body>
 </html>
 <style is:global lang="scss">
-  @use '../styles/functions/functions.scss' as f;
 	html {
 		font-family: 'Alegreya Sans', sans-serif;
 	}
@@ -41,8 +39,7 @@ import Navigation from '../components/Navigation/Navigation.astro';
 	}
 
   header {
-    min-height: 100vh;
-    background-color: f.color-grey('900');
+    background-color: var(--bg-color);
   }
 
 </style>

@@ -1,43 +1,16 @@
-$theme-colors: (
-  'primary': (
-    'default': hsl(216, 100%, 55%),
-    'dark': hsl(216, 100%, 40%),
-    'light': hsl(216, 100%, 70%)
-  ),
-  'secondary': (
-    'default': hsl(0, 0%, 50%),
-    'dark': hsl(0, 0%, 35%),
-    'light': hsl(0, 0%, 65%)
-  ),
-  'light': (
-    'default': hsl(0, 0%, 100%),
-    'dark': hsl(0, 0%, 85%),
-  ),
-  'dark': (
-    'default': hsl(0, 0%, 15%),
-    'light': hsl(0, 0%, 30%),
-  ),
-  'success': (
-    'default': hsl(147, 87%, 60%),
-    'dark': hsl(138, 56%, 50%),
-    'light': hsl(147, 87%, 40%)
-  ),
-  'warning': (
-    'default': hsl(24, 100%, 60%),
-    'dark': hsl(24, 100%, 45%),
-    'light': hsl(24, 100%, 75%)
-  ),
-  'danger': (
-    'default': hsl(0, 100%, 60%),
-    'dark': hsl(0, 100%, 45%),
-    'light':hsl(0, 100%, 75%)
-  ),
-  'info': (
-    'default': hsl(180, 60%, 60%),
-    'dark': hsl(180, 60%, 45%),
-    'light': hsl(180, 60%, 75%)
-  )
-);
+:root {
+  --bg-color: #ffffff;
+  --bg-content-color: #edf2f4;
+  --title-color: #2b2d42;
+  --body-color: #8d99ae;
+  --primary-color: #d90429;
+  --secondary-color: #ef233c;
+  --accent-color: #ff8600;
+  --disabled-color: #9db4c0;
+
+  --content-width: 860px;
+  --transition: 0.2s;
+}
 
 $light-dark: (
 '100': hsl(210, 17%, 98%),
