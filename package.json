@@ -9,11 +9,11 @@
     "build": "npm-run-all build-astro compress",
     "preview": "astro preview",
     "astro": "astro",
-    "analyze": "analyze-css --file dist/styles/styles.min.css",
-    "install": "npm install"
+    "analyze": "analyze-css --file dist/styles/styles.min.css"
   },
   "dependencies": {
-    "astro": "^1.2.1"
+    "astro": "^1.2.1",
+    "astro-compress": "^1.0.8"
   },
   "devDependencies": {
     "analyze-css": "^2.1.55",

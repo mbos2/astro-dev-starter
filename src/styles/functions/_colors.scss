@@ -1,6 +1,6 @@
 @use '../configuration/configuration.scss';
 
-@function color($color, $type:'default') {
+@function color-primary($color, $type:'default') {
   @if map-has-key(configuration.$theme-colors, $color) {
     $prop: map-get(configuration.$theme-colors, $color);
     @if $type != 'default' and map-has-key($prop, $type) {
@@ -8,6 +8,17 @@
     } @else {
       $color: map-get($prop, 'default');
     }
+  } @else {
+    @if type-of($color) != color {
+      @error 'Invalid color name: `#{$color}`.';
+    }
+  }
+  @return $color;
+}
+
+@function color-grey($color) {
+  @if map-has-key(configuration.$light-dark, $color) {
+    $color: map-get(configuration.$light-dark, $color);
   } @else {
     @if type-of($color) != color {
       @error 'Invalid color name: `#{$color}`.';
