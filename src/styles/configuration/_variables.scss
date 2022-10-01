@@ -8,6 +8,17 @@
   --accent-color: #ff8600;
   --disabled-color: #9db4c0;
 
+  &[data-theme="dark"] {
+    --bg-color: #000;
+    --bg-content-color: #202020;
+    --title-color: #ebebeb;
+    --body-color: #c3c3c3;
+    --primary-color: #00fbff;
+    --secondary-color: #d28c00;
+    --accent-color: #00fbff;
+    --disabled-color: #9db4c0;
+  }
+
   --content-width: 860px;
   --transition: 0.2s;
 }
