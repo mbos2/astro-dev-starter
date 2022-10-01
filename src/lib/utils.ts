@@ -1,16 +1,19 @@
-const DEFAULT_THEME = 'light';
-export type ColorTheme = 'light' | 'dark';
-
-export const setColorTheme = (theme: ColorTheme): void => {
-  localStorage.setItem('colorTheme', theme);
-  document.documentElement.setAttribute('data-theme', theme);
-};
-
-export const getColorTheme = (): ColorTheme => {
+export const setColorTheme = () => {
   const theme = localStorage.getItem('colorTheme');
+    
   if (!theme) {
-    return DEFAULT_THEME;
-  } else {
-    theme;
+    localStorage.setItem('colorTheme', 'dark');
+    return document.documentElement.setAttribute('data-theme', 'dark');
   }
-};
+
+  document.documentElement.removeAttribute('data-theme');
+  localStorage.removeItem('colorTheme');
+}
+
+export const initColorTheme = () => {
+  const theme = localStorage.getItem('colorTheme');
+  if(theme) {
+    return document.documentElement.setAttribute('data-theme', theme); 
+  }
+  document.documentElement.removeAttribute('data-theme');
+}
