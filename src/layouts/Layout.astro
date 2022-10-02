@@ -4,6 +4,7 @@ export interface Props {
 }
 
 const { title } = Astro.props;
+import { Footer } from '../components/Footer/Footer';
 import Navigation from '../components/Navigation/Navigation.astro';
 ---
 
@@ -25,7 +26,7 @@ import Navigation from '../components/Navigation/Navigation.astro';
       <Navigation />
     </header>
 		<slot />
-    <footer></footer>
+    <Footer client:load author="Mbos2"/>
     <script>
       import {initColorTheme} from '../lib/utils';
       initColorTheme();
