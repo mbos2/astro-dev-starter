@@ -1,27 +1,18 @@
 {
-  "name": "astro-dev-starter",
+  "name": "@example/basics",
   "version": "0.0.1",
   "private": true,
   "scripts": {
+    "dev": "astro dev",
     "start": "astro dev",
-    "build-astro": "astro build",
-    "compress": "astro-compress",
-    "build": "npm-run-all build-astro compress",
+    "build": "astro build",
     "preview": "astro preview",
-    "astro": "astro",
-    "analyze": "analyze-css --file dist/styles/styles.min.css"
+    "astro": "astro"
   },
   "dependencies": {
-    "@astrojs/react": "^1.1.4",
-    "astro": "^1.2.1",
-    "astro-compress": "^1.0.8",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "astro": "^1.2.1"
   },
   "devDependencies": {
-    "analyze-css": "^2.1.55",
-    "npm-run-all": "^4.1.5",
-    "prettier": "^2.7.1",
-    "sass": "^1.54.9"
+    "prettier": "^2.7.1"
   }
 }
