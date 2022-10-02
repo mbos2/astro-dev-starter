@@ -3,7 +3,7 @@ import Moon from '../../icons/Moon';
 
 const ThemeToggler = () => {
   return (
-    <Moon onClick={() => setColorTheme()}/>
+    <Moon size={36} onClick={() => setColorTheme()}/>
   )
 }
 
