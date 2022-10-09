@@ -1,0 +1,79 @@
+/* ubuntu-mono-regular - latin */
+@font-face {
+  font-family: 'Ubuntu Mono';
+  font-style: normal;
+  font-weight: 400;
+  src: url('../fonts/ubuntu-mono-v15-latin-regular.eot'); /* IE9 Compat Modes */
+  src: local(''),
+    url('./fonts/ubuntu-mono-v15-latin-regular.eot?#iefix')
+      format('embedded-opentype'),
+    /* IE6-IE8 */ url('./fonts/ubuntu-mono-v15-latin-regular.woff2')
+      format('woff2'),
+    /* Super Modern Browsers */
+      url('./fonts/ubuntu-mono-v15-latin-regular.woff') format('woff'),
+    /* Modern Browsers */ url('./fonts/ubuntu-mono-v15-latin-regular.ttf')
+      format('truetype'),
+    /* Safari, Android, iOS */
+      url('./fonts/ubuntu-mono-v15-latin-regular.svg#UbuntuMono') format('svg'); /* Legacy iOS */
+}
+
+html {
+  font-family: 'Ubuntu Mono';
+}
+
+body {
+  line-height: 1.2;
+  font-size: 100%;
+}
+
+h1 {
+  font-size: clamp(3.80rem, 4vw, 5rem);
+  line-height: 1.2em;
+  padding-top: 0.2em;
+  padding-bottom: 0.2em;
+}
+h2 {
+  font-size: clamp(3.30rem, 3.50vw, 4.50rem);
+  line-height: 1.2em;
+  padding-top: 0.2em;
+  padding-bottom: 0.2em;
+}
+h3 {
+  font-size: clamp(2.80rem, 3vw, 4rem);
+  line-height: 1.2em;
+  padding-top: 0.2em;
+  padding-bottom: 0.2em;
+}
+h4 {
+  font-size: clamp(2.30rem, 2.50vw, 3.5rem);
+  line-height: 1.2em;
+  padding-top: 0.2em;
+  padding-bottom: 0.2em;
+}
+h5 {
+  font-size: clamp(1.80rem, 2vw, 3rem);
+  line-height: 1.2em;
+  padding-top: 0.2em;
+  padding-bottom: 0.2em;
+}
+h6 {
+  font-size: clamp(1.45rem, 1.75vw, 2.75rem);
+  line-height: 1.2em;
+  padding-top: 0.2em;
+  padding-bottom: 0.2em;
+}
+
+h1,h2,h3,h4,h5,h6 {
+  text-rendering: optimizelegibility;
+}
+
+a {
+  text-decoration: none;  
+}
+
+hr {
+	margin: 0;
+	border: 0;
+	height: 1px;
+	background-color: var(--primary-color);
+}
