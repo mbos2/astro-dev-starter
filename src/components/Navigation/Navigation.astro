@@ -1,25 +1,47 @@
 ---
+import ThemeToggler from '../base/buttons/ThemeToggler';
+import Link from '../base/links/Link';
 ---
 <nav>
-  <div>
-    <a class="" title="home" href="#" target="_blank">Bring me Home!</a>
+  <div style="padding: 20px;">    
+    <Link className="link title" href="#" text="DEV STARTER"/>
+  </div>
+  <div class="links">    
+    <Link className="link" href="#" text="Portfolio "/>
+    <Link className="link" href="#" text="CV"/>
+    <Link className="link" href="#" text="Contact "/>
+    <Link className="link" href="#" text="Blog "/>
+  </div>
+  <div class="toggler">
+    <ThemeToggler client:load/>
   </div>
 </nav>
 
 <style lang="scss">
   nav {
-    padding: 40px 20px;
     width: 80%;
     margin: auto;
+    display: flex;
+    justify-content: space-between;
 
-    a {
-      text-decoration: none;
+    .link {    
       color: var(--primary-color);
-      font-size: xx-large;
-
       &:hover{
         color: var(--secondary-color);
       }
+
+      &.title {
+        font-size: 2.5rem;
+      }
+    }
+    .links {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+      }
+    .toggler {
+      display: flex;
+      align-items: center;
     }
   }
 </style>

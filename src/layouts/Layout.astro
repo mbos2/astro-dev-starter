@@ -6,6 +6,7 @@ export interface Props {
 const { title } = Astro.props;
 import { Footer } from '../components/Footer/Footer';
 import Navigation from '../components/Navigation/Navigation.astro';
+import { Footer } from '../components/Footer/Footer';
 ---
 
 
@@ -34,17 +35,20 @@ import Navigation from '../components/Navigation/Navigation.astro';
 	</body>
 </html>
 <style is:global lang="scss">
-	html {
-		font-family: 'Alegreya Sans', sans-serif;
-	}
 
 	body {
 		margin: 0;
     padding: 0;
+    min-height: 100vh;
+    background-color: var(--bg-color);
 	}
 
   header {
-    background-color: var(--bg-color);
+    background-color: var(--header-color);
+  }
+
+  a {
+    font-size: 1.198rem;
   }
 
 </style>

@@ -1,0 +1,11 @@
+@import '../../styles/configuration/configuration.scss';
+
+.moon {
+  rect {
+    stroke: var(--secondary-color);
+  }
+
+  path {
+    fill: var(--secondary-color);
+  }
+}
