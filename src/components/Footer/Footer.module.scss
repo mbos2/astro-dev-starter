@@ -1,7 +1,8 @@
 @use '../../styles/mixins.scss' as m;
 
 .footer {
-  background-color: var(--bg-content-color);
+  background-color: var(--bg-color);
+  color: var(--primary-color);
   text-align: center;
   font-size: 0.8rem;
 

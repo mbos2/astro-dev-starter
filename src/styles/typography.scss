@@ -55,6 +55,14 @@ h5 {
 
 h6 {
   font-size: clamp(1.45rem, 1.75vw, 2.75rem);
+  line-height: 1.2em;
+  padding-top: 0.2em;
+  padding-bottom: 0.2em;
+}
+
+h1,h2,h3,h4,h5,h6 {
+  text-rendering: optimizelegibility;
+  color: var(--primary-color);
 }
 
 a {

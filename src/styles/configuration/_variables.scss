@@ -1,24 +1,17 @@
 :root {
-  --bg-color: hsl(210, 14%, 83%);
-  --bg-content-color: #edf2f4;
-  --title-color: #2b2d42;
-  --body-color: hsl(210, 14%, 83%);
-  --header-color: hsl(210, 17%, 98%);
-  --primary-color: #d90429;
-  --secondary-color: #ff8600;
-  --accent-color: #ff8600;
+  --bg-color: hsl(227, 18%, 10%);
+  --bg-color-lighter: hsl(227, 18%, 20%);
+  --primary-color: hsl(176, 96%, 69%);
+  --secondary-color: hsl(180, 4%, 95%);
+  --accent-color: hsl(30, 100%, 65%);
   --disabled-color: #9db4c0;
 
-  &[data-theme="dark"] {
-    --bg-color: hsl(210, 9%, 31%);
-    --bg-content-color: #202020;
-    --title-color: #ebebeb;
-    --body-color: #fff;
-    --primary-color: #00fbff;
-    --secondary-color: #ebebeb;
-    --accent-color: #00fbff;
+  &[data-theme='dark'] {
+    --bg-color: hsl(227, 18%, 10%);
+    --primary-color: hsl(176, 96%, 69%);
+    --secondary-color: hsl(180, 4%, 95%);
+    --accent-color: hsl(30, 100%, 65%);
     --disabled-color: #9db4c0;
-    --header-color: hsl(208, 7%, 46%);
   }
 
   --content-width: 860px;
@@ -26,21 +19,26 @@
 }
 
 $light-dark: (
-'100': hsl(210, 17%, 98%),
-'200': hsl(210, 16%, 93%),
-'300': hsl(210, 14%, 89%),
-'400': hsl(210, 14%, 83%),
-'500': hsl(210, 11%, 71%),
-'600': hsl(208, 7%, 46%),
-'700': hsl(210, 9%, 31%),
-'800': hsl(210, 10%, 23%),
-'900': hsl(210, 11%, 15%)
+  '100': hsl(210, 17%, 98%),
+  '200': hsl(210, 16%, 93%),
+  '300': hsl(210, 14%, 89%),
+  '400': hsl(210, 14%, 83%),
+  '500': hsl(210, 11%, 71%),
+  '600': hsl(208, 7%, 46%),
+  '700': hsl(210, 9%, 31%),
+  '800': hsl(210, 10%, 23%),
+  '900': hsl(210, 11%, 15%),
 );
 
 $breakpoints: (
-  'xs': 0rem, // 0px mobile
-  'sm': 40rem, // 640px tablet
-  'md': 62rem, // 992px laptop
-  'lg': 75rem, // 1200px desktop
-  'xlg': 90rem, // 1440px large desktop
+  'xs': 0rem,
+  // 0px mobile
+  'sm': 40rem,
+  // 640px tablet
+  'md': 62rem,
+  // 992px laptop
+  'lg': 75rem,
+  // 1200px desktop
+  'xlg': 90rem,
+  // 1440px large desktop
 );
