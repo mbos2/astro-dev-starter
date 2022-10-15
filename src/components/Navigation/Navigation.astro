@@ -27,7 +27,7 @@ import LinkedinIcon from '../icons/LinkedinIcon/LinkedinIcon';
         </Link>
       </div>
     </div>
-    <div class="menu-box" onclick="NavToggler()">
+    <div id="menu-box" class="menu-box" onclick="NavToggler()">
       <span>MENU</span>
       <NavigationToggler client:load />
     </div>
@@ -64,7 +64,9 @@ import LinkedinIcon from '../icons/LinkedinIcon/LinkedinIcon';
   const NavToggler = () => {
     const toggler = document.getElementById('navigation-toggler');
     const links = document.querySelector('.links-wrapper');
+    const menubox = document.getElementById('menu-box');
     toggler.classList.toggle('change');
+    menubox.classList.toggle('change-bg');
     links.classList.toggle('nav-display');
   };
 </script>
@@ -138,6 +140,10 @@ import LinkedinIcon from '../icons/LinkedinIcon/LinkedinIcon';
           justify-content: center;
           height: 100%;
         }
+      }
+
+      > .change-bg {
+        background-position: right !important;
       }
 
       > .menu-box {
