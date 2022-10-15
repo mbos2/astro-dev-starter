@@ -20,6 +20,7 @@
   },
   "devDependencies": {
     "analyze-css": "^2.1.55",
+    "eslint": "^8.24.0",
     "npm-run-all": "^4.1.5",
     "prettier": "^2.7.1",
     "sass": "^1.54.9"

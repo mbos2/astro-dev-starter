@@ -1,54 +1,95 @@
 ---
 export interface Props {
-	title: string;
+  title: string;
 }
 
 const { title } = Astro.props;
 import { Footer } from '../components/Footer/Footer';
 import Navigation from '../components/Navigation/Navigation.astro';
-import { Footer } from '../components/Footer/Footer';
 ---
-
 
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Alegreya+Sans:ital,wght@0,100;0,300;0,400;0,500;0,700;0,800;0,900;1,100;1,300;1,400;1,500;1,700;1,800;1,900&display=swap" rel="stylesheet">
-		<meta name="generator" content={Astro.generator} />
-		<title>{title}</title>
-	</head>
-	<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Alegreya+Sans:ital,wght@0,100;0,300;0,400;0,500;0,700;0,800;0,900;1,100;1,300;1,400;1,500;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <meta name="generator" content={Astro.generator} />
+    <title>{title}</title>
+  </head>
+  <body>
     <header>
-      <Navigation />
+      <Navigation client:load />
     </header>
-		<slot />
-    <Footer client:load author="Mbos2"/>
+    <main>
+      <div class="container">
+        <slot />
+      </div>
+    </main>
+    <Footer client:load author="Mbos2" />
     <script>
-      import {initColorTheme} from '../lib/utils';
+      import { initColorTheme } from '../lib/utils';
       initColorTheme();
+
+      const header = document.querySelector('header');
+      window.addEventListener('scroll', (event) => {
+        if (window.scrollY > 50 && window.innerWidth > 640) {
+          header.style.marginTop = '40px';
+          header.style.marginLeft = 'auto';
+          header.style.marginRight = 'auto';
+          header.style.left = '0';
+          header.style.right = '0';
+          header.style.width = '90%';
+          header.style.border = '0.5px solid var(--primary-color)';
+        } else {
+          header.style.marginTop = '0';
+          header.style.width = '100%';
+          header.style.border = 'none';
+          header.style.borderBottom = '0.5px solid var(--primary-color)';
+        }
+      });
     </script>
-	</body>
+  </body>
 </html>
 <style is:global lang="scss">
-
-	body {
-		margin: 0;
+  @use '../styles/layout/layout.scss';
+  body {
+    margin: 0;
     padding: 0;
     min-height: 100vh;
     background-color: var(--bg-color);
-	}
+  }
 
   header {
-    background-color: var(--header-color);
+    height: 120px;
+    background-color: var(--bg-color);
+    border-bottom: 0.5px solid var(--primary-color);
+    position: fixed;
+    top: 0;
+    width: 100%;
+    transition: all 0.3s;
   }
 
   a {
     font-size: 1.198rem;
   }
 
+  main {
+    margin-top: 200px;
+  }
+  .container {
+    display: block;
+    margin: auto;
+    width: 60%;
+    cursor: default;
+    // @include layout.screen('sm') {
+    //   width: 95%;
+    // }
+  }
 </style>

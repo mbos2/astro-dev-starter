@@ -1,1 +1,10 @@
-@use 'mixins.scss';
+@use '../configuration/variables';
+
+@mixin screen($breakpoint) {
+  @if map-has-key(variables.$breakpoints, $breakpoint) {
+    $breakpoint: map-get(variables.$breakpoints, $breakpoint);
+  } @else {
+    @error 'Invalid breakpoint name: `#{$breakpoint}`.';
+  }
+  @media screen and (max-width: $breakpoint) { @content; }
+}
