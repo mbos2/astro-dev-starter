@@ -4,6 +4,7 @@ export interface Props {
 }
 
 const { title } = Astro.props;
+import BackToTopButton from '../components/BackToTopButton/BackToTopButton.astro';
 import { Footer } from '../components/Footer/Footer';
 import Navigation from '../components/Navigation/Navigation.astro';
 ---
@@ -25,11 +26,12 @@ import Navigation from '../components/Navigation/Navigation.astro';
   </head>
   <body>
     <header>
-      <Navigation client:load />
+      <Navigation />
     </header>
     <main>
       <div class="container">
         <slot />
+        <BackToTopButton />
       </div>
     </main>
     <Footer client:load author="Mbos2" />
@@ -59,6 +61,10 @@ import Navigation from '../components/Navigation/Navigation.astro';
 </html>
 <style is:global lang="scss">
   @use '../styles/layout/layout.scss';
+
+  html {
+    scroll-behavior: smooth;
+  }
   body {
     margin: 0;
     padding: 0;
